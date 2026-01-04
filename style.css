@@ -1,0 +1,46 @@
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --accent-dev: #2ecc71;
+    --accent-design: #e91e63;
+    --card-bg: #f8f9fa;
+    --transition: all 0.3s ease;
+}
+
+.dark-theme {
+    --bg: #0f172a;
+    --text: #f8fafc;
+    --card-bg: #1e293b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); transition: var(--transition); overflow-x: hidden; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+.mono { font-family: 'Fira Code', monospace; }
+
+/* Navigation */
+header { padding: 1.5rem 0; position: sticky; top: 0; z-index: 1000; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed; flex-direction: column; inset: 0 0 0 30%; background: var(--card-bg); 
+        padding: min(30vh, 10rem) 2em; transform: translateX(100%); transition: transform 350ms ease-out;
+    }
+    .nav-links[data-visible="true"] { transform: translateX(0%); }
+    .mobile-nav-toggle { display: block; z-index: 9999; background: transparent; border: 0; width: 2rem; aspect-ratio: 1; }
+}
+
+/* Interactivity: Scroll Reveal */
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Buttons & Cards */
+.btn { padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: var(--transition); }
+.btn-primary { border: 2px solid var(--accent-dev); color: var(--accent-dev); }
+.btn-primary:hover { background: var(--accent-dev); color: white; transform: scale(1.05); }
+
+.skill-card { background: var(--card-bg); padding: 2rem; border-radius: 12px; transition: var(--transition); }
+.skill-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
