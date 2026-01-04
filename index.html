@@ -3,82 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arslan Khan | Developer & Designer</title>
+    <title>Arslan Khan | Dev & Design Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Fira+Code&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body class="dark-theme">
+<body>
 
-    <header>
-        <nav class="container">
-            <div class="logo">ARSLAN<b>KHAN</b></div>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="sr-only">Menu</span>
-                <div class="hamburger"></div>
-            </button>
-            <ul id="primary-navigation" class="nav-links" data-visible="false">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#dev">Web Dev</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#about">About</a></li>
-                <li><button id="theme-toggle" class="theme-btn">🌓</button></li>
-            </ul>
-        </nav>
+    <nav class="navbar">
+        <div class="logo">AK.</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Start</a></li>
+            <li><a href="#dev">Dev</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <a href="assets/resume.pdf" class="btn-resume" target="_blank">Resume <i class="fas fa-arrow-right"></i></a>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <p class="subtitle">Hello, I'm Arslan Khan</p>
+            <h1>I build <span class="txt-type" data-wait="3000" data-words='["Data Pipelines", "User Interfaces", "Digital Brands"]'></span></h1>
+            <p class="description">
+                BCA (Hons.) Student bridging the gap between <b>Data Science</b> and <b>Creative Design</b>. 
+                Based in Bengaluru.
+            </p>
+            <div class="cta-group">
+                <a href="#dev" class="btn btn-primary">View Development</a>
+                <a href="#design" class="btn btn-secondary">View Design</a>
+            </div>
+        </div>
+        <div class="hero-shape"></div>
     </header>
 
-    <main>
-        <section id="home" class="hero fade-in">
-            <div class="container">
-                <h1>Arslan Khan</h1>
-                <p class="tagline">BCA (Hons.) student at Akash College [cite: 4] bridging the gap between Data Science and UI/UX Design[cite: 35, 45].</p>
-                <div class="hero-btns">
-                    <a href="#dev" class="btn btn-primary">Engineering</a>
-                    <a href="#design" class="btn btn-secondary">Creative</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="dev" class="section dev-theme reveal">
-            <div class="container">
-                <h2 class="section-title"><span>&lt;</span> Engineering <span>/&gt;</span></h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>Technical Stack</h3>
-                        <p class="mono">Python, HTML, CSS, JavaScript, SQL, LaTeX [cite: 33, 39, 41, 42, 46, 47]</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Certifications</h3>
-                        <ul>
-                            <li>Python for Data Science (IBM) [cite: 23, 24]</li>
-                            <li>Discrete Mathematics (UC San Diego) [cite: 10, 12]</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="design" class="section design-theme reveal">
-            <div class="container">
-                <h2 class="section-title">Visual Design</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>Toolkit</h3>
-                        <p>Figma, Adobe Illustrator, Photoshop, After Effects [cite: 32, 34, 38, 43]</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Creative Strategy</h3>
-                        <p>SEO-driven UI/UX Design and Visual Branding[cite: 34, 45].</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contact">
+    <section id="dev" class="section dev-section">
         <div class="container">
-            <p>Connect: <a href="mailto:arslankhansna@gmail.com">arslankhansna@gmail.com</a> [cite: 2]</p>
-            <p>Bengaluru, India [cite: 2]</p>
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="grid-wrapper">
+                <div class="card glass">
+                    <h3><i class="fas fa-code"></i> Core Stack</h3>
+                    <div class="tags">
+                        <span>Python</span><span>SQL</span><span>HTML/CSS</span>
+                        <span>JavaScript</span><span>LaTeX</span>
+                    </div>
+                </div>
+                <div class="card glass">
+                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                    <ul class="list-check">
+                        <li>Python for Data Science & AI (IBM) [cite: 23]</li>
+                        <li>Google Digital Marketing [cite: 21]</li>
+                        <li>Discrete Mathematics (UC San Diego) [cite: 12]</li>
+                    </ul>
+                </div>
+                <div class="card glass full-width">
+                    <h3>Selected Projects</h3>
+                    <p><strong>Data Science & ML:</strong> Applied Python libraries (Pandas, NumPy) to analyze complex datasets[cite: 26].</p>
+                    <a href="https://github.com/yourusername" class="link-text">View GitHub &rarr;</a>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section id="design" class="section design-section">
+        <div class="container">
+            <h2 class="section-title">Creative Works</h2>
+            <p class="section-desc">Tools: Figma, Adobe Photoshop, Illustrator, After Effects[cite: 32, 38, 43].</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="background: linear-gradient(45deg, #ff007a, #4a00e0);"></div>
+                    <div class="overlay">
+                        <h4>UI/UX Design</h4>
+                        <p>App Interfaces</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="background: linear-gradient(45deg, #00d2ff, #3a7bd5);"></div>
+                    <div class="overlay">
+                        <h4>Brand Identity</h4>
+                        <p>Logo & Social Media</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img" style="background: linear-gradient(45deg, #f9d423, #ff4e50);"></div>
+                    <div class="overlay">
+                        <h4>Motion Graphics</h4>
+                        <p>After Effects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    I am currently pursuing my <strong>BCA (Hons.)</strong> at Akash College (2022-2026).
+                    My background includes specialized training in <em>"Writing in the Sciences,"</em> ensuring I can communicate complex technical concepts with clarity[cite: 6].
+                </p>
+                <div class="contact-box">
+                    <p>Let's create something together.</p>
+                    <a href="mailto:arslankhansna@gmail.com" class="email-link">arslankhansna@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Arslan Khan. Built with Code & Creativity.</p>
     </footer>
 
     <script src="main.js"></script>
